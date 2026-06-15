@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'rate-limiter-9e8546';
+const APP_NAME = 'rate-limiter-304272';
 const VERSION = '1.0.0';
 class UrateUlimiterHandler {
   constructor(options = {}) {
